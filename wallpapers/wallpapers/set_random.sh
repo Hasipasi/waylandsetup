@@ -1,0 +1,5 @@
+#!/bin/bash
+WALLPAPER_DIR="$HOME/wallpapers"
+WALLPAPERS=("$WALLPAPER_DIR"/*)
+RANDOM_WALL=${WALLPAPERS[$RANDOM % ${#WALLPAPERS[@]}]}
+swww img "$RANDOM_WALL"

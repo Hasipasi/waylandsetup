@@ -3,7 +3,7 @@ set -e
 
 DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 BACKUP_DIR="$HOME/.dotfiles-backup/$(date +%Y%m%d_%H%M%S)"
-STOW_PACKAGES=(waybar hypr rofi kitty)
+STOW_PACKAGES=(waybar hypr rofi kitty wallpapers)
 
 echo "==> Dotfiles installer"
 echo "    Dotfiles: $DOTFILES_DIR"
@@ -46,6 +46,12 @@ done
 
 # Make waybar scripts executable
 chmod +x "$HOME/.config/waybar/scripts/"*.sh 2>/dev/null || true
+chmod +x "$HOME/wallpapers/set_random.sh" 2>/dev/null || true
+
+# --- Generate hyprpaper.conf with correct home path ---
+echo "--> [hyprpaper.conf]"
+sed "s|HOME_DIR|$HOME|g" "$DOTFILES_DIR/templates/hyprpaper.conf" > "$HOME/.config/hypr/hyprpaper.conf"
+echo "    generated: ~/.config/hypr/hyprpaper.conf"
 
 echo ""
 echo "==> Done. Backup saved to: $BACKUP_DIR"

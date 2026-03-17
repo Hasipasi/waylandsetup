@@ -2,7 +2,7 @@
 set -e
 
 DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-STOW_PACKAGES=(waybar hypr rofi kitty)
+STOW_PACKAGES=(waybar hypr rofi kitty wallpapers)
 
 if [ -z "$1" ]; then
     echo "Usage: ./restore.sh <backup-dir>"
