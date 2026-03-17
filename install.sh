@@ -10,6 +10,20 @@ echo "    Dotfiles: $DOTFILES_DIR"
 echo "    Backup:   $BACKUP_DIR"
 echo ""
 
+# --- Install packages ---
+if command -v pacman &>/dev/null; then
+    echo "--> [packages]"
+    if command -v yay &>/dev/null; then
+        yay -S --needed - < "$DOTFILES_DIR/packages.txt"
+    else
+        sudo pacman -S --needed - < "$DOTFILES_DIR/packages.txt"
+    fi
+    echo "    packages installed"
+else
+    echo "    skipping packages (pacman not found)"
+fi
+echo ""
+
 # Check dependencies
 if ! command -v stow &>/dev/null; then
     echo "ERROR: stow is not installed. Run: pacman -S stow"
