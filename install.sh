@@ -67,6 +67,17 @@ echo "--> [hyprpaper.conf]"
 sed "s|HOME_DIR|$HOME|g" "$DOTFILES_DIR/templates/hyprpaper.conf" > "$HOME/.config/hypr/hyprpaper.conf"
 echo "    generated: ~/.config/hypr/hyprpaper.conf"
 
+# --- Generate monitors.conf if it doesn't exist ---
+echo "--> [monitors.conf]"
+MONITORS_CONF="$HOME/.config/hypr/monitors.conf"
+if [ ! -f "$MONITORS_CONF" ]; then
+    cp "$HOME/.config/hypr/monitors.default.conf" "$MONITORS_CONF"
+    echo "    generated: ~/.config/hypr/monitors.conf"
+    echo "    Edit this file to configure your displays (see README for details)"
+else
+    echo "    skipped: ~/.config/hypr/monitors.conf already exists"
+fi
+
 echo ""
 echo "==> Done. Backup saved to: $BACKUP_DIR"
 echo "    To restore, run: ./restore.sh $BACKUP_DIR"

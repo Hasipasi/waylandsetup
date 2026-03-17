@@ -46,3 +46,21 @@ dotfiles/
 ```
 
 Editing files in `~/.config/` edits the dotfiles directly (they are symlinks).
+
+## Display configuration
+
+| File | Purpose |
+|------|---------|
+| `~/.config/hypr/monitors.default.conf` | Tracked default (auto-detect all monitors) |
+| `~/.config/hypr/monitors.conf` | **Your machine-specific config** (gitignored) |
+
+`install.sh` creates `monitors.conf` from the default if it doesn't exist.
+Edit that file to configure your displays:
+
+```bash
+# Example: ~/.config/hypr/monitors.conf
+monitor=eDP-1, 2560x1440@60, 0x2160, 1.25
+monitor=DP-2, 3840x2160@59.99700, 0x0, 1.5
+```
+
+See the [Hyprland monitor docs](https://wiki.hypr.land/Configuring/Monitors/) for syntax.
