@@ -12,9 +12,6 @@ kitty
 # Launcher
 rofi-wayland
 
-# Key remapping
-keyd
-
 # Power management
 power-profiles-daemon
 

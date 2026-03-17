@@ -47,19 +47,6 @@ done
 # Make waybar scripts executable
 chmod +x "$HOME/.config/waybar/scripts/"*.sh 2>/dev/null || true
 
-# --- keyd (system-level, needs sudo) ---
-echo "--> [keyd]"
-if [ -f /etc/keyd/trackpoint.conf ] && [ ! -L /etc/keyd/trackpoint.conf ]; then
-    sudo mkdir -p "$BACKUP_DIR/keyd/etc/keyd"
-    sudo mv /etc/keyd/trackpoint.conf "$BACKUP_DIR/keyd/etc/keyd/trackpoint.conf"
-    echo "    backed up: /etc/keyd/trackpoint.conf"
-fi
-sudo mkdir -p /etc/keyd
-sudo cp "$DOTFILES_DIR/keyd/etc/keyd/trackpoint.conf" /etc/keyd/trackpoint.conf
-echo "    installed: /etc/keyd/trackpoint.conf"
-sudo systemctl enable --now keyd 2>/dev/null || true
-sudo keyd reload 2>/dev/null || true
-
 echo ""
 echo "==> Done. Backup saved to: $BACKUP_DIR"
 echo "    To restore, run: ./restore.sh $BACKUP_DIR"

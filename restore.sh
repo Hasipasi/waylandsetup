@@ -45,14 +45,5 @@ for pkg in "${STOW_PACKAGES[@]}"; do
     done < <(find "$pkg_backup" -not -type d -print0)
 done
 
-# --- keyd restore ---
-keyd_backup="$BACKUP_DIR/keyd/etc/keyd/trackpoint.conf"
-if [ -f "$keyd_backup" ]; then
-    echo "--> [keyd] restoring"
-    sudo mv "$keyd_backup" /etc/keyd/trackpoint.conf
-    sudo keyd reload 2>/dev/null || true
-    echo "    restored: /etc/keyd/trackpoint.conf"
-fi
-
 echo ""
 echo "==> Restore complete."

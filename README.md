@@ -10,7 +10,6 @@ Hyprland setup for ThinkPad X1 Carbon 6th (Arch Linux).
 | waybar | status bar with CPU/power/temp/battery/volume/brightness |
 | rofi | application launcher |
 | kitty | terminal |
-| keyd | TrackPoint middle button → Super key |
 
 ## Install
 
