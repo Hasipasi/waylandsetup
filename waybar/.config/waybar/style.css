@@ -1,0 +1,161 @@
+* {
+    font-family: "Font Awesome 6 Free", Helvetica, Arial, sans-serif;
+    font-size: 15px;
+}
+
+tooltip {
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    color: white;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 15px;
+}
+
+window#waybar {
+    background: transparent;
+    border-bottom: none;
+    color: #ffffff;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+#workspaces {
+    margin: 2px 5px;
+}
+
+#workspaces button {
+    padding: 0 5px;
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    margin: 0 2px;
+    min-height: 24px;
+}
+
+#workspaces button:hover {
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.9);
+    box-shadow: none;
+    outline: none;
+}
+
+#workspaces button.active {
+    background: transparent;
+    border: 2px solid #33ccff;
+}
+
+#custom-clock, #battery, #custom-cpu, #custom-temp, #memory, #network, #pulseaudio, #tray {
+    padding: 0 10px;
+}
+
+#tray > * {
+    margin: 0 4px;
+}
+
+#custom-pwr-ps.visible,
+#custom-pwr-bal.visible,
+#custom-pwr-perf.visible {
+    padding:    0 6px;
+    min-height: 24px;
+}
+
+#custom-pwr-ps.hidden,
+#custom-pwr-bal.hidden,
+#custom-pwr-perf.hidden {
+    min-width:  0;
+    padding:    0;
+    margin:     0;
+    border:     none;
+    background: transparent;
+}
+
+#custom-volume.visible,
+#custom-brightness.visible {
+    background:    rgba(0, 0, 0, 0.3);
+    border:        2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    margin:        2px 5px 2px 0;
+    padding:       0 10px;
+    min-height:    24px;
+}
+
+#custom-volume.hidden,
+#custom-brightness.hidden {
+    min-width:  0;
+    padding:    0;
+    margin:     0;
+    border:     none;
+    background: transparent;
+}
+
+#right {
+    background: rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    margin: 2px 5px;
+    min-height: 24px;
+}
+
+#custom-clock {
+    background: rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    margin: 2px 0;
+    min-height: 24px;
+}
+
+#pulseaudio {
+    color: #ff4444;
+}
+
+#pulseaudio.normal {
+    color: #ffffff;
+}
+
+#custom-cpu.power-saver {
+    color: #44ff88;
+}
+
+#custom-cpu.balanced {
+    color: #ffffff;
+}
+
+#custom-cpu.performance {
+    color: #ffaa00;
+}
+
+#custom-cpu.critical {
+    color: #ff4444;
+}
+
+#memory.warning {
+    color: #ffaa00;
+}
+
+#memory.critical {
+    color: #ff4444;
+}
+
+#custom-temp.hot {
+    color: #ff4444;
+}
+
+#battery.charging,
+#battery.plugged,
+#battery.full {
+    color: #44ff88;
+}
+
+#battery.not-charging {
+    color: #ffaa00;
+}
+
+#battery.warning {
+    color: #ffaa00;
+}
+
+#battery.critical {
+    color: #ff4444;
+}

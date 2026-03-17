@@ -1,0 +1,103 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 30,
+    "margin-top": -6,
+    "margin-bottom": 2,
+    "margin-left": -2,
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["custom/clock"],
+    "modules-right": ["custom/volume", "custom/brightness", "group/right"],
+
+    "group/right": {
+        "orientation": "horizontal",
+        "modules": ["custom/pwr-ps", "custom/pwr-bal", "custom/pwr-perf", "custom/cpu", "custom/temp", "memory", "battery", "tray"]
+    },
+    "hyprland/workspaces": {
+        "format": "{name}",
+        "on-click": "activate"
+    },
+    "custom/clock": {
+        "exec": "~/.config/waybar/scripts/clock.sh",
+        "return-type": "json",
+        "interval": 30,
+        "on-click": "flatpak run com.ml4w.calendar"
+    },
+    "battery": {
+        "format": "{icon} {capacity}%",
+        "states": {
+            "warning": 30,
+            "critical": 10
+        }
+    },
+    "custom/cpu": {
+        "exec": "~/.config/waybar/scripts/cpu-power.sh",
+        "return-type": "json",
+        "interval": 2,
+        "on-click": "~/.config/waybar/scripts/power-toggle.sh"
+    },
+    "custom/pwr-ps": {
+        "exec": "~/.config/waybar/scripts/power-option.sh '🐢'",
+        "return-type": "json",
+        "interval": "once",
+        "signal": 3,
+        "on-click": "~/.config/waybar/scripts/set-power.sh power-saver"
+    },
+    "custom/pwr-bal": {
+        "exec": "~/.config/waybar/scripts/power-option.sh '⚖️'",
+        "return-type": "json",
+        "interval": "once",
+        "signal": 3,
+        "on-click": "~/.config/waybar/scripts/set-power.sh balanced"
+    },
+    "custom/pwr-perf": {
+        "exec": "~/.config/waybar/scripts/power-option.sh '🚀'",
+        "return-type": "json",
+        "interval": "once",
+        "signal": 3,
+        "on-click": "~/.config/waybar/scripts/set-power.sh performance"
+    },
+    "custom/temp": {
+        "exec": "~/.config/waybar/scripts/temp.sh",
+        "return-type": "json",
+        "interval": 1
+    },
+    "memory": {
+        "interval": 1,
+        "states": {
+            "warning": 70,
+            "critical": 90
+        }
+    },
+    "custom/volume": {
+        "exec": "~/.config/waybar/scripts/volume.sh",
+        "return-type": "json",
+        "interval": 1,
+        "signal": 2,
+        "on-click": "pavucontrol"
+    },
+    "custom/brightness": {
+        "exec": "~/.config/waybar/scripts/brightness.sh",
+        "return-type": "json",
+        "interval": 1,
+        "signal": 1
+    },
+    "tray": {
+        "spacing": 10
+    },
+    "network": {
+        "format-wifi": "{essid}",
+        "format-disconnected": "Disconnected"
+    },
+    "pulseaudio": {
+        "format": "{volume}%",
+        "format-muted": "Muted",
+        "tooltip-format": "{desc}",
+        "on-click": "pavucontrol",
+        "on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%+ --limit 1.5",
+        "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%-",
+        "states": {
+            "normal": 101
+        }
+    }
+}

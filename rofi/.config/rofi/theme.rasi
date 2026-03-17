@@ -1,0 +1,61 @@
+window {
+    font:               "Helvetica 15";
+    background-color:   #00000099;
+    border:             2px solid;
+    border-color:       #ffffff4d;
+    border-radius:      4px;
+    padding:            8px;
+    width:              700px;
+    location:           north;
+    margin:             500px 0 0 0;
+}
+
+mainbox {
+    background-color:   transparent;
+    spacing:            6px;
+}
+
+inputbar {
+    background-color:   transparent;
+    text-color:         #ffffff;
+    padding:            4px 8px;
+    border:             2px solid;
+    border-color:       #ffffff4d;
+    border-radius:      4px;
+}
+
+prompt, entry, case-indicator {
+    background-color:   transparent;
+    text-color:         #ffffff;
+}
+
+listview {
+    background-color:   transparent;
+    lines:              8;
+    spacing:            4px;
+}
+
+element {
+    background-color:   transparent;
+    text-color:         #ffffff;
+    padding:            4px 8px;
+    border-radius:      4px;
+    border:             2px solid;
+    border-color:       transparent;
+}
+
+element selected {
+    background-color:   transparent;
+    text-color:         #ffffff;
+    border-color:       #33ccff;
+}
+
+element-icon {
+    background-color:   transparent;
+    size:               1.5em;
+}
+
+element-text {
+    background-color:   transparent;
+    text-color:         inherit;
+}

@@ -1,0 +1,37 @@
+* {
+    font-family: Helvetica, sans-serif;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+#window {
+    background: rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+}
+
+#outer-box {
+    padding: 4px;
+}
+
+#scroll {
+    margin: 0;
+}
+
+#inner-box {
+    margin: 0;
+}
+
+#entry {
+    padding: 6px 12px;
+    border-radius: 3px;
+}
+
+#entry:selected {
+    background: rgba(51, 204, 255, 0.2);
+    color: #33ccff;
+}
+
+#text {
+    margin: 0;
+}

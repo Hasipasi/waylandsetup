@@ -1,0 +1,39 @@
+# Arch Linux packages required for this setup
+# Install with: pacman -S --needed - < packages.txt
+
+# Compositor & Bar
+hyprland
+hyprpaper
+waybar
+
+# Terminal
+kitty
+
+# Launcher
+rofi-wayland
+
+# Key remapping
+keyd
+
+# Power management
+power-profiles-daemon
+
+# Audio
+wireplumber
+pavucontrol
+
+# Brightness
+brightnessctl
+
+# System monitoring
+lm_sensors
+procps-ng
+
+# Bluetooth
+blueman
+
+# Flatpak (for calendar app)
+flatpak
+
+# GNU Stow (for dotfiles management)
+stow
