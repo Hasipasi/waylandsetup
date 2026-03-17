@@ -38,11 +38,11 @@ Each app is a stow package mirroring the target filesystem layout:
 
 ```
 dotfiles/
-├── waybar/.config/waybar/   → ~/.config/waybar/
-├── hypr/.config/hypr/       → ~/.config/hypr/
-├── rofi/.config/rofi/       → ~/.config/rofi/
-├── kitty/.config/kitty/     → ~/.config/kitty/
-└── keyd/etc/keyd/           → /etc/keyd/  (copied, not symlinked)
+├── waybar/.config/waybar/      → ~/.config/waybar/
+├── hypr/.config/hypr/          → ~/.config/hypr/
+├── rofi/.config/rofi/          → ~/.config/rofi/
+├── kitty/.config/kitty/        → ~/.config/kitty/
+└── wallpapers/wallpapers/      → ~/wallpapers/
 ```
 
 Editing files in `~/.config/` edits the dotfiles directly (they are symlinks).
