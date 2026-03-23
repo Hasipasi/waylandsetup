@@ -4,6 +4,7 @@
 # Compositor & Bar
 hyprland
 hyprpaper
+hyprlock
 waybar
 
 # Terminal
