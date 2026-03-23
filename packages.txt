@@ -19,6 +19,7 @@ libnotify
 # Audio
 wireplumber
 pavucontrol
+playerctl
 
 # Brightness
 brightnessctl

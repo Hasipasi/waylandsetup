@@ -7,7 +7,7 @@
     "margin-left": -2,
     "modules-left": ["hyprland/workspaces"],
     "modules-center": ["custom/clock"],
-    "modules-right": ["custom/volume", "custom/brightness", "group/right"],
+    "modules-right": ["custom/media", "custom/volume", "custom/brightness", "group/right"],
 
     "group/right": {
         "orientation": "horizontal",
@@ -17,7 +17,13 @@
         "format": "{name}",
         "on-click": "activate"
     },
-    "custom/clock": {
+    "custom/media": {
+        "exec": "~/.config/waybar/scripts/media.sh",
+        "return-type": "json",
+        "interval": 2,
+        "on-click": "playerctl play-pause"
+    },
+"custom/clock": {
         "exec": "~/.config/waybar/scripts/clock.sh",
         "return-type": "json",
         "interval": 30,
