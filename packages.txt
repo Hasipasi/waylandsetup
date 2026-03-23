@@ -18,6 +18,7 @@ libnotify
 
 # Audio
 wireplumber
+pipewire-pulse
 pavucontrol
 playerctl
 
