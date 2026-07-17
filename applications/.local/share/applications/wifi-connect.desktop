@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=WiFi
+Comment=Connect to WiFi networks
+Exec=sh -c '~/.config/waybar/scripts/wifi.sh'
+Icon=/usr/share/icons/Adwaita/symbolic/status/network-wireless-signal-good-symbolic.svg
+Categories=Utility;
+NoDisplay=false

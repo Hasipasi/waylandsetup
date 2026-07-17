@@ -46,7 +46,7 @@ window#waybar {
     border: 2px solid #33ccff;
 }
 
-#custom-clock, #battery, #custom-cpu, #custom-temp, #memory, #network, #pulseaudio, #tray {
+#custom-clock, #battery, #custom-cpu, #custom-temp, #memory, #network, #pulseaudio, #custom-wifi, #tray {
     padding: 0 10px;
 }
 

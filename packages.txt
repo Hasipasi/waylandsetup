@@ -13,6 +13,14 @@ kitty
 # Launcher
 rofi-wayland
 
+# Screenshots (Print keybind: grim -g "$(slurp)" - | wl-copy)
+grim
+slurp
+wl-clipboard
+
+# Networking (wifi manager script uses nmcli)
+networkmanager
+
 # Power management
 power-profiles-daemon
 libnotify

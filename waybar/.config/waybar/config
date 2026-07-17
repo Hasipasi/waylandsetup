@@ -11,7 +11,7 @@
 
     "group/right": {
         "orientation": "horizontal",
-        "modules": ["custom/pwr-ps", "custom/pwr-bal", "custom/pwr-perf", "custom/cpu", "custom/temp", "memory", "battery", "tray"]
+        "modules": ["custom/pwr-ps", "custom/pwr-bal", "custom/pwr-perf", "custom/cpu", "custom/temp", "memory", "battery", "custom/wifi", "tray"]
     },
     "hyprland/workspaces": {
         "format": "{name}",
@@ -87,6 +87,12 @@
         "return-type": "json",
         "interval": 1,
         "signal": 1
+    },
+    "custom/wifi": {
+        "exec": "~/.config/waybar/scripts/wifi-status.sh",
+        "return-type": "json",
+        "interval": 1,
+        "on-click": "~/.config/waybar/scripts/wifi.sh"
     },
     "tray": {
         "spacing": 10

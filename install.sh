@@ -3,7 +3,7 @@ set -e
 
 DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 BACKUP_DIR="$HOME/.dotfiles-backup/$(date +%Y%m%d_%H%M%S)"
-STOW_PACKAGES=(waybar hypr rofi kitty wallpapers)
+STOW_PACKAGES=(waybar hypr rofi kitty wallpapers applications)
 
 echo "==> Dotfiles installer"
 echo "    Dotfiles: $DOTFILES_DIR"

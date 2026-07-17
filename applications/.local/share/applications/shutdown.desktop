@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Shutdown
+Comment=Power off the computer now
+Exec=sh -c '~/.config/waybar/scripts/power-confirm.sh poweroff'
+Icon=/usr/share/icons/Adwaita/symbolic/actions/system-shutdown-symbolic.svg
+Categories=System;
+NoDisplay=false

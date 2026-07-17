@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Name=Reboot
+Comment=Restart the computer now
+Exec=sh -c '~/.config/waybar/scripts/power-confirm.sh reboot'
+Icon=/usr/share/icons/Adwaita/symbolic/actions/system-reboot-symbolic.svg
+Categories=System;
+NoDisplay=false
